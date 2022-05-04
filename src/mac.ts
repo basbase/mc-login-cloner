@@ -9,11 +9,11 @@ const escapeCommand = (cmd: string): string =>
 
 export class Mac extends Cloner {
   getLaunchCommand(): void {
-    const cmd = execSync('ps -eo args -r | grep java-runtime-alpha | head -1', {
+    const cmd = execSync('ps -eo args -r | grep minecraft/runtime/java-runtime | head -1', {
       encoding: 'utf8',
     }).trim();
 
-    if (cmd === 'grep java-runtime-alpha') {
+    if (cmd === 'grep minecraft/runtime/java-runtime') {
       throw new Error(
         'Failed to get launch command. Make sure the game is running.',
       );
