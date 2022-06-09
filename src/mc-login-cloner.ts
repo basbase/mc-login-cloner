@@ -18,7 +18,7 @@ async function promptUsername() {
   console.log(
     `MC Login Cloner
   
-This program will copy your running game folder and change your username in the launch command. This allows you to play using a different username on servers that do not verify identity. This can be useful for LAN play.
+This program will change your username in the launch command. This allows you to play using a different username on servers that do not verify identity. This can be useful for LAN play.
 
 [!] First launch the game using the launcher and keep it running while this program does it's job.
 
