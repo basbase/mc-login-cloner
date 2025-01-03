@@ -20,7 +20,7 @@ export class Mac extends Cloner {
       );
     }
 
-    this.cmd = cmd;
+    this.cmd = cmd.replace(/(-D[^ ]+=) /g, '$1');
   }
 
   createLauncher(name: string): void {
