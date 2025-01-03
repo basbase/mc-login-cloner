@@ -8,7 +8,7 @@
     "format": "eslint --fix . --ext .ts,.tsx",
     "lint": "eslint . --ext .ts,.tsx",
     "run": "ts-node src/mc-login-cloner.ts",
-    "dist": "tsc && cd dist && npx pkg mc-login-cloner.js -C Brotli"
+    "dist": "tsc && cd dist && npx pkg mc-login-cloner.js -C Brotli -t node18-win,node18-mac"
   },
   "author": "",
   "license": "MIT",
