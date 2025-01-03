@@ -2,6 +2,7 @@ import prompt from 'prompt';
 import pressAnyKey from 'press-any-key';
 import { Mac } from './mac';
 import { Win } from './win';
+import { workingDir } from './util';
 
 function getPlatformSpecificCloner() {
   switch (process.platform) {
@@ -45,7 +46,7 @@ async function run() {
     cloner.run(name);
 
     console.log(
-      `Success! You can now run the launch_${name} script to start the game.`,
+      `Success! You can now run the launch_${name} script to start the game. You can find it in this directory: ${workingDir()}`,
     );
   } catch (e) {
     console.error(`${e}`);

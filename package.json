@@ -1,6 +1,6 @@
 {
   "name": "mc-login-cloner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Change your MC user name for LAN use",
   "main": "index.js",
   "scripts": {
