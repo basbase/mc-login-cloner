@@ -8,4 +8,5 @@ How to use:
 3. Start the game normally using the launcher. Keep the game running.
 4. Run the MC Login Cloner executable. (On Mac, make it executable using `chmod +x mc-login-cloner-macos`)
 5. Enter your desired username.
+6. Confirm if you want to change the default RAM usage limit to 4 GB (recommended for Distant Horizons mod).
 6. You can now quit the game. Launch the cloned game using the created launch_<username> script.

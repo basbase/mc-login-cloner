@@ -15,9 +15,16 @@ export abstract class Cloner {
     this.cmd = this.cmd.replace(/--username .+? /, `--username ${name} `);
   }
 
-  run(name: string): void {
+  updateRam(shouldUpdate: boolean): void {
+    if(shouldUpdate){
+      this.cmd = this.cmd.replace(/ -Xmx2G /, ` -Xmx4G `);
+    }
+  }
+
+  run(name: string, updateRam: boolean): void {
     this.getLaunchCommand();
     this.setUsername(name);
+    this.updateRam(updateRam);
     this.createLauncher(name);
   }
 }

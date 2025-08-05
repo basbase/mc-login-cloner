@@ -38,12 +38,29 @@ What username do you want?`,
   return username;
 }
 
+async function promptRam() {
+  console.log(`Do you want to change the default RAM usage from 2 to 4 GB? (Y/n) (This will replace -Xmx2G with  -Xmx4G, recommended for Distant Horizons mod)`);
+
+  const {updateRam} = await prompt.get({
+    properties: {
+      updateRam: {
+        pattern: /^[yn]$/i,
+        message: 'Use Y or N',
+        default: 'y',
+        required: false,
+      }
+    }
+  });
+  return updateRam.toLowerCase() === 'y'
+}
+
 async function run() {
   try {
     const name = await promptUsername();
+    const updateRam = await promptRam();
     const cloner = new (getPlatformSpecificCloner())();
 
-    cloner.run(name);
+    cloner.run(name, updateRam);
 
     console.log(
       `Success! You can now run the launch_${name} script to start the game. You can find it in this directory: ${workingDir()}`,
