@@ -5,7 +5,7 @@ describe('mac tests', () => {
     const mac = new Mac();
     mac.getLaunchCommand = jest.fn();
     mac.validateCmd = jest.fn();
-    mac.run('x');
+    mac.run('x', true);
     expect(mac.getLaunchCommand).toBeCalled();
   });
 });
